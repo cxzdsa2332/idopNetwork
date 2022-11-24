@@ -1,7 +1,7 @@
 Package: idopNetwork
 Type: Package
-Title: A Cartographic Tool to Chart Spatial Microbial Interaction Networks
-Version: 0.1.1
+Title: A Network Tool to Dissect Spatial Community Ecology
+Version: 0.1.2
 Author: Ang Dong
 Maintainer: Ang Dong <fantasys05227@gmail.com>
 Description: Most existing approaches for network reconstruction can only infer an overall network 
