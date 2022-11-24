@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^idopNetwork\.Rproj$
 ^\.Rproj\.user$
