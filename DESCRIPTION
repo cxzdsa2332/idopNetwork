@@ -24,3 +24,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/cxzdsa2332/idopNetwork
+BugReports: https://github.com/cxzdsa2332/idopNetwork/issues
