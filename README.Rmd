@@ -32,3 +32,7 @@ You can install the development version of idopNetwork from [GitHub](https://git
 # install.packages("devtools")
 devtools::install_github("cxzdsa2332/idopNetwork")
 ```
+
+## Vignette
+
+We demonstrate how to use idopNetwork package to analysis gut microbiota and mustard microbiota data.(https://cxzdsa2332.github.io/idopNetwork/articles/idopNetwork_vignette.html)
