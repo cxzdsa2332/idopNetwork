@@ -114,7 +114,7 @@ power_equation_fit <- function(data, n=30, trans = log10, thread = 2) {
     X = colSums(data)
     trans_data = data
   } else{
-    X = trans(colSums(data+1))
+    X = trans(colSums(data)+1)
     trans_data = trans(data+1)
   }
   colnames(trans_data) = X
