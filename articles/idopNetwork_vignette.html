@@ -449,20 +449,30 @@ SAD1, it can be showed as</p>
 <span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
 <span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
 <span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
 <span><span class="co">#&gt; $initial_cov_params</span></span>
 <span><span class="co">#&gt; [1] 0.50000 1.09618</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $initial_mu_params</span></span>
-<span><span class="co">#&gt;                 a          b</span></span>
-<span><span class="co">#&gt; [1,] 6.856174e+02  -3.235497</span></span>
-<span><span class="co">#&gt; [2,] 4.378423e+07 -11.252193</span></span>
-<span><span class="co">#&gt; [3,] 1.085234e+09 -12.807990</span></span>
-<span><span class="co">#&gt; [4,] 7.206028e-41  58.213660</span></span>
+<span><span class="co">#&gt;                 a           b</span></span>
+<span><span class="co">#&gt; [1,] 1.222931e+15 -21.7299294</span></span>
+<span><span class="co">#&gt; [2,] 2.241187e-35  50.4618037</span></span>
+<span><span class="co">#&gt; [3,] 1.275766e+01  -0.8462029</span></span>
+<span><span class="co">#&gt; [4,] 1.930699e+02  -3.6047139</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $initial_probibality</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;          1          2          3          4 </span></span>
-<span><span class="co">#&gt; 0.03278689 0.36065574 0.26229508 0.34426230</span></span>
+<span><span class="co">#&gt; 0.24590164 0.27868852 0.06557377 0.40983607</span></span>
 <span></span>
 <span><span class="co">#use kmeans to get initial centers</span></span>
 <span><span class="va">tmp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/kmeans.html" class="external-link">kmeans</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">df</span><span class="op">+</span><span class="fl">1</span><span class="op">)</span>,<span class="fl">4</span><span class="op">)</span><span class="op">$</span><span class="va">centers</span></span>
@@ -481,77 +491,71 @@ matrix modelling and likelihood ratio calculation into a function
 <span><span class="fu"><a href="../reference/fun_clu.html">fun_clu</a></span><span class="op">(</span><span class="va">result1</span><span class="op">$</span><span class="va">original_data</span>, k <span class="op">=</span> <span class="fl">3</span>, iter.max <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
 <span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
-<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
-<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
-<span><span class="co">#&gt; initial  value 1225.809009 </span></span>
-<span><span class="co">#&gt; iter  10 value 1131.213293</span></span>
-<span><span class="co">#&gt; final  value 1125.868090 </span></span>
+<span><span class="co">#&gt; initial  value 1224.701250 </span></span>
+<span><span class="co">#&gt; final  value 1224.701250 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 1 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1125.868 </span></span>
-<span><span class="co">#&gt; initial  value 1118.632899 </span></span>
-<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
-<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
-<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
-<span><span class="co">#&gt; final  value 1115.215803 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1229.444 </span></span>
+<span><span class="co">#&gt; initial  value 1228.240624 </span></span>
+<span><span class="co">#&gt; final  value 1228.240624 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 2 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1115.216 </span></span>
-<span><span class="co">#&gt; initial  value 1113.154279 </span></span>
-<span><span class="co">#&gt; final  value 1112.161474 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1225.461 </span></span>
+<span><span class="co">#&gt; initial  value 1224.705979 </span></span>
+<span><span class="co">#&gt; final  value 1224.705979 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 3 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1112.161 </span></span>
-<span><span class="co">#&gt; initial  value 1111.441667 </span></span>
-<span><span class="co">#&gt; final  value 1111.183066 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1226.112 </span></span>
+<span><span class="co">#&gt; initial  value 1225.588016 </span></span>
+<span><span class="co">#&gt; final  value 1225.588016 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 4 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1111.183 </span></span>
-<span><span class="co">#&gt; initial  value 1110.923563 </span></span>
-<span><span class="co">#&gt; final  value 1110.833857 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1224.793 </span></span>
+<span><span class="co">#&gt; initial  value 1224.655751 </span></span>
+<span><span class="co">#&gt; final  value 1224.655751 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 5 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1110.834 </span></span>
-<span><span class="co">#&gt; initial  value 1110.730885 </span></span>
-<span><span class="co">#&gt; final  value 1110.694607 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1224.97 </span></span>
+<span><span class="co">#&gt; initial  value 1224.822485 </span></span>
+<span><span class="co">#&gt; final  value 1224.822485 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 6 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1110.695</span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1227.894</span></span>
 <span><span class="co">#&gt; $cluster_number</span></span>
 <span><span class="co">#&gt; [1] 3</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $Log_likelihodd</span></span>
-<span><span class="co">#&gt; [1] 1110.695</span></span>
+<span><span class="co">#&gt; [1] 1227.894</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $AIC</span></span>
-<span><span class="co">#&gt; [1] 2241.389</span></span>
+<span><span class="co">#&gt; [1] 2475.787</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $BIC</span></span>
-<span><span class="co">#&gt; [1] 2260.101</span></span>
+<span><span class="co">#&gt; [1] 2494.499</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $cov_par</span></span>
-<span><span class="co">#&gt; [1] 0.3550810 0.7415481</span></span>
+<span><span class="co">#&gt; [1] 0.500000 1.098059</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $mu_par</span></span>
 <span><span class="co">#&gt;              [,1]       [,2]</span></span>
-<span><span class="co">#&gt; [1,] 1.595896e+13 -19.044474</span></span>
-<span><span class="co">#&gt; [2,] 4.803194e+01  -1.683865</span></span>
-<span><span class="co">#&gt; [3,] 4.142917e-26  36.857815</span></span>
+<span><span class="co">#&gt; [1,] 2.161219e-15  21.401464</span></span>
+<span><span class="co">#&gt; [2,] 4.804131e+01  -1.686739</span></span>
+<span><span class="co">#&gt; [3,] 2.210693e+16 -23.629600</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $probibality</span></span>
-<span><span class="co">#&gt; [1] 0.46813133 0.08309011 0.44877856</span></span>
+<span><span class="co">#&gt; [1] 0.57603917 0.07110126 0.35285957</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $omega</span></span>
 <span><span class="co">#&gt;               [,1]         [,2]         [,3]</span></span>
-<span><span class="co">#&gt;  [1,] 9.998988e-01 3.154768e-10 1.011961e-04</span></span>
-<span><span class="co">#&gt;  [2,] 9.978411e-01 1.159312e-10 2.158880e-03</span></span>
-<span><span class="co">#&gt;  [3,] 9.398918e-01 9.560049e-18 6.010819e-02</span></span>
+<span><span class="co">#&gt;  [1,] 2.536304e-01 3.140715e-04 7.460555e-01</span></span>
+<span><span class="co">#&gt;  [2,] 4.400950e-01 2.237826e-04 5.596812e-01</span></span>
+<span><span class="co">#&gt;  [3,] 5.594828e-01 1.463402e-06 4.405157e-01</span></span>
 <span><span class="co">#&gt;  [ reached getOption("max.print") -- omitted 45 rows ]</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $cluster</span></span>
@@ -677,7 +681,7 @@ Modules/microbes names and the coefficients.</p>
 <span><span class="co">#&gt; [1] "M5"</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $coefficient</span></span>
-<span><span class="co">#&gt; [1] 6.01101</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 5.964078</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="for-microbes">4.2 For Microbes<a class="anchor" aria-label="anchor" href="#for-microbes"></a>
