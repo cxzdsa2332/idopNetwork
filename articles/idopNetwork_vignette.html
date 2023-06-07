@@ -71,7 +71,7 @@
       <img src="" class="logo" alt=""><h1>idopNetwork_vignette</h1>
                         <h4 data-toc-skip class="author">Ang Dong</h4>
             
-            <h4 data-toc-skip class="date">02/16/2023</h4>
+            <h4 data-toc-skip class="date">06/07/2023</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/cxzdsa2332/idopNetwork/blob/HEAD/vignettes/idopNetwork_vignette.Rmd" class="external-link"><code>vignettes/idopNetwork_vignette.Rmd</code></a></small>
       <div class="d-none name"><code>idopNetwork_vignette.Rmd</code></div>
@@ -447,20 +447,22 @@ SAD1, it can be showed as</p>
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/get_par_int.html">get_par_int</a></span><span class="op">(</span>X <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">df</span><span class="op">+</span><span class="fl">1</span><span class="op">)</span>, k <span class="op">=</span> <span class="fl">4</span>, times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html" class="external-link">colSums</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span><span class="op">+</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
 <span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
 <span><span class="co">#&gt; $initial_cov_params</span></span>
 <span><span class="co">#&gt; [1] 0.50000 1.09618</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $initial_mu_params</span></span>
 <span><span class="co">#&gt;                 a          b</span></span>
-<span><span class="co">#&gt; [1,] 1.931170e+02  -3.604868</span></span>
-<span><span class="co">#&gt; [2,] 2.241189e-35  50.461803</span></span>
-<span><span class="co">#&gt; [3,] 1.222871e+15 -21.729898</span></span>
-<span><span class="co">#&gt; [4,] 1.275774e+01  -0.846207</span></span>
+<span><span class="co">#&gt; [1,] 6.856174e+02  -3.235497</span></span>
+<span><span class="co">#&gt; [2,] 4.378423e+07 -11.252193</span></span>
+<span><span class="co">#&gt; [3,] 1.085234e+09 -12.807990</span></span>
+<span><span class="co">#&gt; [4,] 7.206028e-41  58.213660</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $initial_probibality</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;          1          2          3          4 </span></span>
-<span><span class="co">#&gt; 0.40983607 0.27868852 0.24590164 0.06557377</span></span>
+<span><span class="co">#&gt; 0.03278689 0.36065574 0.26229508 0.34426230</span></span>
 <span></span>
 <span><span class="co">#use kmeans to get initial centers</span></span>
 <span><span class="va">tmp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/kmeans.html" class="external-link">kmeans</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log10</a></span><span class="op">(</span><span class="va">df</span><span class="op">+</span><span class="fl">1</span><span class="op">)</span>,<span class="fl">4</span><span class="op">)</span><span class="op">$</span><span class="va">centers</span></span>
@@ -477,71 +479,79 @@ matrix modelling and likelihood ratio calculation into a function
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>max.print <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/fun_clu.html">fun_clu</a></span><span class="op">(</span><span class="va">result1</span><span class="op">$</span><span class="va">original_data</span>, k <span class="op">=</span> <span class="fl">3</span>, iter.max <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
-<span><span class="co">#&gt; initial  value 1224.701251 </span></span>
-<span><span class="co">#&gt; final  value 1224.701251 </span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; Error in nls(y ~ a * x^b, start = list(a = a, b = b), control = nls.control(maxiter = 1000,  : </span></span>
+<span><span class="co">#&gt;   number of iterations exceeded maximum of 1000</span></span>
+<span><span class="co">#&gt; initial  value 1225.809009 </span></span>
+<span><span class="co">#&gt; iter  10 value 1131.213293</span></span>
+<span><span class="co">#&gt; final  value 1125.868090 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 1 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1229.475 </span></span>
-<span><span class="co">#&gt; initial  value 1228.265078 </span></span>
-<span><span class="co">#&gt; final  value 1228.265078 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1125.868 </span></span>
+<span><span class="co">#&gt; initial  value 1118.632899 </span></span>
+<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
+<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
+<span><span class="co">#&gt; iter  10 value 1115.215803</span></span>
+<span><span class="co">#&gt; final  value 1115.215803 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 2 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1225.468 </span></span>
-<span><span class="co">#&gt; initial  value 1224.707089 </span></span>
-<span><span class="co">#&gt; final  value 1224.707089 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1115.216 </span></span>
+<span><span class="co">#&gt; initial  value 1113.154279 </span></span>
+<span><span class="co">#&gt; final  value 1112.161474 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 3 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1226.135 </span></span>
-<span><span class="co">#&gt; initial  value 1225.602812 </span></span>
-<span><span class="co">#&gt; final  value 1225.602812 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1112.161 </span></span>
+<span><span class="co">#&gt; initial  value 1111.441667 </span></span>
+<span><span class="co">#&gt; final  value 1111.183066 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 4 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1224.796 </span></span>
-<span><span class="co">#&gt; initial  value 1224.656472 </span></span>
-<span><span class="co">#&gt; final  value 1224.656472 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1111.183 </span></span>
+<span><span class="co">#&gt; initial  value 1110.923563 </span></span>
+<span><span class="co">#&gt; final  value 1110.833857 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 5 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1224.976 </span></span>
-<span><span class="co">#&gt; initial  value 1224.826743 </span></span>
-<span><span class="co">#&gt; final  value 1224.826743 </span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1110.834 </span></span>
+<span><span class="co">#&gt; initial  value 1110.730885 </span></span>
+<span><span class="co">#&gt; final  value 1110.694607 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  iter = 6 </span></span>
-<span><span class="co">#&gt;  Log-Likelihood =  1227.959</span></span>
+<span><span class="co">#&gt;  Log-Likelihood =  1110.695</span></span>
 <span><span class="co">#&gt; $cluster_number</span></span>
 <span><span class="co">#&gt; [1] 3</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $Log_likelihodd</span></span>
-<span><span class="co">#&gt; [1] 1227.959</span></span>
+<span><span class="co">#&gt; [1] 1110.695</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $AIC</span></span>
-<span><span class="co">#&gt; [1] 2475.918</span></span>
+<span><span class="co">#&gt; [1] 2241.389</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $BIC</span></span>
-<span><span class="co">#&gt; [1] 2494.63</span></span>
+<span><span class="co">#&gt; [1] 2260.101</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $cov_par</span></span>
-<span><span class="co">#&gt; [1] 0.500000 1.098059</span></span>
+<span><span class="co">#&gt; [1] 0.3550810 0.7415481</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $mu_par</span></span>
 <span><span class="co">#&gt;              [,1]       [,2]</span></span>
-<span><span class="co">#&gt; [1,] 4.804097e+01  -1.686734</span></span>
-<span><span class="co">#&gt; [2,] 2.210692e+16 -23.629600</span></span>
-<span><span class="co">#&gt; [3,] 2.162519e-15  21.401446</span></span>
+<span><span class="co">#&gt; [1,] 1.595896e+13 -19.044474</span></span>
+<span><span class="co">#&gt; [2,] 4.803194e+01  -1.683865</span></span>
+<span><span class="co">#&gt; [3,] 4.142917e-26  36.857815</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $probibality</span></span>
-<span><span class="co">#&gt; [1] 0.07109303 0.35293082 0.57597615</span></span>
+<span><span class="co">#&gt; [1] 0.46813133 0.08309011 0.44877856</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $omega</span></span>
 <span><span class="co">#&gt;               [,1]         [,2]         [,3]</span></span>
-<span><span class="co">#&gt;  [1,] 3.138283e-04 7.458904e-01 2.537958e-01</span></span>
-<span><span class="co">#&gt;  [2,] 2.235675e-04 5.594523e-01 4.403241e-01</span></span>
-<span><span class="co">#&gt;  [3,] 1.463081e-06 4.406611e-01 5.593374e-01</span></span>
+<span><span class="co">#&gt;  [1,] 9.998988e-01 3.154768e-10 1.011961e-04</span></span>
+<span><span class="co">#&gt;  [2,] 9.978411e-01 1.159312e-10 2.158880e-03</span></span>
+<span><span class="co">#&gt;  [3,] 9.398918e-01 9.560049e-18 6.010819e-02</span></span>
 <span><span class="co">#&gt;  [ reached getOption("max.print") -- omitted 45 rows ]</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $cluster</span></span>
@@ -667,7 +677,7 @@ Modules/microbes names and the coefficients.</p>
 <span><span class="co">#&gt; [1] "M5"</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $coefficient</span></span>
-<span><span class="co">#&gt; [1] 5.951174</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 6.01101</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="for-microbes">4.2 For Microbes<a class="anchor" aria-label="anchor" href="#for-microbes"></a>
@@ -709,7 +719,7 @@ used for inferring idopNetwork.</p>
 <span><span class="co"># first we test solving a qdODE</span></span>
 <span><span class="va">module.relationship</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">best.k</span>, <span class="kw">function</span><span class="op">(</span><span class="va">c</span><span class="op">)</span><span class="fu"><a href="../reference/get_interaction.html">get_interaction</a></span><span class="op">(</span><span class="va">df.module</span>,<span class="va">c</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">ode.test</span> <span class="op">=</span> <span class="fu"><a href="../reference/qdODE_all.html">qdODE_all</a></span><span class="op">(</span>result <span class="op">=</span> <span class="va">result3</span>, relationship <span class="op">=</span> <span class="va">module.relationship</span>, <span class="fl">1</span>, maxit <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
-<span><span class="co">#&gt; iter   10 value 0.004294</span></span>
+<span><span class="co">#&gt; iter   10 value 0.004336</span></span>
 <span><span class="co">#&gt; final  value 0.000002 </span></span>
 <span><span class="co">#&gt; converged</span></span>
 <span><span class="co"># we can view the result</span></span>
@@ -816,19 +826,22 @@ is lost, try rerun cluster or use a smaller k.</p>
 </h2>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; R version 4.2.2 (2022-10-31)</span></span>
+<span><span class="co">#&gt; R version 4.3.0 (2023-04-21)</span></span>
 <span><span class="co">#&gt; Platform: x86_64-pc-linux-gnu (64-bit)</span></span>
-<span><span class="co">#&gt; Running under: Ubuntu 22.04.1 LTS</span></span>
+<span><span class="co">#&gt; Running under: Ubuntu 22.04.2 LTS</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Matrix products: default</span></span>
-<span><span class="co">#&gt; BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3</span></span>
-<span><span class="co">#&gt; LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so</span></span>
+<span><span class="co">#&gt; BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 </span></span>
+<span><span class="co">#&gt; LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; locale:</span></span>
 <span><span class="co">#&gt;  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       </span></span>
 <span><span class="co">#&gt;  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   </span></span>
 <span><span class="co">#&gt;  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          </span></span>
 <span><span class="co">#&gt; [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; time zone: UTC</span></span>
+<span><span class="co">#&gt; tzcode source: system (glibc)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; attached base packages:</span></span>
 <span><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
@@ -837,29 +850,29 @@ is lost, try rerun cluster or use a smaller k.</p>
 <span><span class="co">#&gt; [1] idopNetwork_0.1.2</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
-<span><span class="co">#&gt;  [1] deSolve_1.34         shape_1.4.6          xfun_0.37           </span></span>
-<span><span class="co">#&gt;  [4] bslib_0.4.2          reshape2_1.4.4       purrr_1.0.1         </span></span>
-<span><span class="co">#&gt;  [7] splines_4.2.2        lattice_0.20-45      colorspace_2.1-0    </span></span>
-<span><span class="co">#&gt; [10] vctrs_0.5.2          htmltools_0.5.4      yaml_2.3.7          </span></span>
-<span><span class="co">#&gt; [13] utf8_1.2.3           survival_3.4-0       rlang_1.0.6         </span></span>
-<span><span class="co">#&gt; [16] orthopolynom_1.0-6.1 pkgdown_2.0.7        jquerylib_0.1.4     </span></span>
-<span><span class="co">#&gt; [19] pillar_1.8.1         withr_2.5.0          glue_1.6.2          </span></span>
-<span><span class="co">#&gt; [22] plyr_1.8.8           foreach_1.5.2        lifecycle_1.0.3     </span></span>
-<span><span class="co">#&gt; [25] stringr_1.5.0        munsell_0.5.0        gtable_0.3.1        </span></span>
-<span><span class="co">#&gt; [28] ragg_1.2.5           mvtnorm_1.1-3        codetools_0.2-18    </span></span>
-<span><span class="co">#&gt; [31] memoise_2.0.1        evaluate_0.20        labeling_0.4.2      </span></span>
-<span><span class="co">#&gt; [34] knitr_1.42           fastmap_1.1.0        parallel_4.2.2      </span></span>
-<span><span class="co">#&gt; [37] fansi_1.0.4          highr_0.10           Rcpp_1.0.10         </span></span>
-<span><span class="co">#&gt; [40] polynom_1.4-1        scales_1.2.1         cachem_1.0.6        </span></span>
-<span><span class="co">#&gt; [43] desc_1.4.2           jsonlite_1.8.4       farver_2.1.1        </span></span>
-<span><span class="co">#&gt; [46] systemfonts_1.0.4    fs_1.6.1             textshaping_0.3.6   </span></span>
-<span><span class="co">#&gt; [49] ggplot2_3.4.1        digest_0.6.31        stringi_1.7.12      </span></span>
-<span><span class="co">#&gt; [52] grid_4.2.2           rprojroot_2.0.3      cli_3.6.0           </span></span>
-<span><span class="co">#&gt; [55] tools_4.2.2          magrittr_2.0.3       sass_0.4.5          </span></span>
-<span><span class="co">#&gt; [58] glmnet_4.1-6         patchwork_1.1.2      tibble_3.1.8        </span></span>
-<span><span class="co">#&gt; [61] pkgconfig_2.0.3      Matrix_1.5-1         rmarkdown_2.20      </span></span>
-<span><span class="co">#&gt; [64] iterators_1.0.14     R6_2.5.1             igraph_1.4.0        </span></span>
-<span><span class="co">#&gt; [67] compiler_4.2.2</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] sass_0.4.6           utf8_1.2.3           shape_1.4.6         </span></span>
+<span><span class="co">#&gt;  [4] stringi_1.7.12       lattice_0.21-8       digest_0.6.31       </span></span>
+<span><span class="co">#&gt;  [7] magrittr_2.0.3       evaluate_0.21        grid_4.3.0          </span></span>
+<span><span class="co">#&gt; [10] iterators_1.0.14     mvtnorm_1.2-1        fastmap_1.1.1       </span></span>
+<span><span class="co">#&gt; [13] plyr_1.8.8           foreach_1.5.2        rprojroot_2.0.3     </span></span>
+<span><span class="co">#&gt; [16] jsonlite_1.8.5       glmnet_4.1-7         Matrix_1.5-4        </span></span>
+<span><span class="co">#&gt; [19] deSolve_1.35         survival_3.5-5       purrr_1.0.1         </span></span>
+<span><span class="co">#&gt; [22] fansi_1.0.4          scales_1.2.1         codetools_0.2-19    </span></span>
+<span><span class="co">#&gt; [25] textshaping_0.3.6    jquerylib_0.1.4      cli_3.6.1           </span></span>
+<span><span class="co">#&gt; [28] rlang_1.1.1          munsell_0.5.0        splines_4.3.0       </span></span>
+<span><span class="co">#&gt; [31] withr_2.5.0          cachem_1.0.8         yaml_2.3.7          </span></span>
+<span><span class="co">#&gt; [34] tools_4.3.0          parallel_4.3.0       reshape2_1.4.4      </span></span>
+<span><span class="co">#&gt; [37] polynom_1.4-1        memoise_2.0.1        colorspace_2.1-0    </span></span>
+<span><span class="co">#&gt; [40] ggplot2_3.4.2        orthopolynom_1.0-6.1 vctrs_0.6.2         </span></span>
+<span><span class="co">#&gt; [43] R6_2.5.1             lifecycle_1.0.3      stringr_1.5.0       </span></span>
+<span><span class="co">#&gt; [46] fs_1.6.2             ragg_1.2.5           pkgconfig_2.0.3     </span></span>
+<span><span class="co">#&gt; [49] desc_1.4.2           pkgdown_2.0.7        pillar_1.9.0        </span></span>
+<span><span class="co">#&gt; [52] bslib_0.4.2          gtable_0.3.3         glue_1.6.2          </span></span>
+<span><span class="co">#&gt; [55] Rcpp_1.0.10          systemfonts_1.0.4    highr_0.10          </span></span>
+<span><span class="co">#&gt; [58] xfun_0.39            tibble_3.2.1         knitr_1.43          </span></span>
+<span><span class="co">#&gt; [61] farver_2.1.1         patchwork_1.1.2      htmltools_0.5.5     </span></span>
+<span><span class="co">#&gt; [64] igraph_1.4.3         labeling_0.4.2       rmarkdown_2.22      </span></span>
+<span><span class="co">#&gt; [67] compiler_4.3.0</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
